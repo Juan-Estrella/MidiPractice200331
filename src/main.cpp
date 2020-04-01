@@ -51,4 +51,18 @@ void loop()
 {
   myusb.Task();
   midi1.read();
+  if (Serial.available())
+  {
+    char ch = Serial.read();
+    if (ch == 'a')
+    {
+      waveform1.frequency(440);
+      waveform1.amplitude(1);
+    }
+    if (ch == 's')
+    {
+      waveform1.frequency(440);
+      waveform1.amplitude(0);
+    }
+  }
 }
