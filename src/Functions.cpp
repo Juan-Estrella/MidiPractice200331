@@ -1,7 +1,7 @@
-#include "Functions.h"
 #include <Arduino.h>
 #include <Audio.h>
 #include "GuiTool.h"
+#include "Functions.h"
 
 //**************Functions****************************
 void MyNoteOn(byte channel, byte note, byte velocity)

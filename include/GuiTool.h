@@ -11,5 +11,4 @@ AudioConnection patchCord2(waveform1, 0, i2s1, 1);
 AudioControlSGTL5000 sgtl5000_1; //xy=588,480
 // GUItool: end automatically generated code
 
-
 #endif
