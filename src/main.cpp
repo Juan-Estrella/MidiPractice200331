@@ -1,33 +1,13 @@
 #include <Arduino.h>
 #include <Audio.h>
 #include <USBHost_t36.h>
+#include "GuiTool.h"
+#include "Functions.h"
 //*************Object Instantiation********
 USBHost myusb;
 USBHub hub1(myusb);
 USBHub hub2(myusb);
 MIDIDevice midi1(myusb);
-
-//*************GUI Tool********************
-// GUItool: begin automatically generated code from Teensy Audio System Design Tool
-AudioSynthWaveform waveform1; //xy=429,378
-AudioOutputI2S i2s1;          //xy=747,377
-AudioConnection patchCord1(waveform1, 0, i2s1, 0);
-AudioConnection patchCord2(waveform1, 0, i2s1, 1);
-AudioControlSGTL5000 sgtl5000_1; //xy=588,480
-// GUItool: end automatically generated code
-
-//**************Functions****************************
-void MyNoteOn(byte channel, byte note, byte velocity)
-{
-  waveform1.frequency(440);
-  waveform1.amplitude(1);
-}
-
-void MyNoteOff(byte channel, byte note, byte velocity)
-{
-  waveform1.frequency(440);
-  waveform1.amplitude(0);
-}
 
 //*******************Set Up*********************
 void setup()
