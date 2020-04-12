@@ -58,11 +58,13 @@ void loop()
     {
       waveform1.frequency(440);
       waveform1.amplitude(1);
+      Serial.println("a");
     }
     if (ch == 's')
     {
       waveform1.frequency(440);
       waveform1.amplitude(0);
+      Serial.println("s");
     }
   }
 }
