@@ -21,12 +21,14 @@ void MyNoteOn(byte channel, byte note, byte velocity)
 {
   waveform1.frequency(440);
   waveform1.amplitude(1);
+  Serial.println("Note on");
 }
 
 void MyNoteOff(byte channel, byte note, byte velocity)
 {
   waveform1.frequency(440);
   waveform1.amplitude(0);
+  Serial.println("Note off");
 }
 
 //*******************Set Up*********************
